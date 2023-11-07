@@ -19,7 +19,8 @@ export const Input = (props: InputProps) => {
     return (
         <div>
             <label htmlFor={props.id}>{label}</label>
-            <input {...rest} type='text' value={text} onChange={onInputChange} />
+            {/* label요소를 사용하지 않는 경우 input 요소에 aria-label을 지정해서 요소를 얻을 수도 있다. */}
+            <input {...rest} type='text' value={text} onChange={onInputChange} aria-label={label}/>
             <button onClick={resetInputField}>Reset</button>
         </div>
     )
