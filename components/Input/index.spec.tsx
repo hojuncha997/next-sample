@@ -32,7 +32,7 @@ describe('Input', () => {
         const inputNode = screen.getByLabelText('Username') as HTMLInputElement
 
         // fireEvent를 사용해 input 요소의 onChange 이벤트를 트리거한다.
-        fireEvent.change(inputNode, {target: {value: inputText}})
+        fireEvent.change(inputNode, {target: {va lue: inputText}})
 
         // input 요소에 입력한 텍스트가 표시되는지 확인한다.
         expect(inputNode).toHaveValue(inputText)
